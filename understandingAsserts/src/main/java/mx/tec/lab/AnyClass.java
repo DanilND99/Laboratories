@@ -2,6 +2,10 @@ package mx.tec.lab;
 
 public class AnyClass {
 	public void methodThatShouldThrowException() {
-		throw new UnsupportedOperationException("Operation Not Supported");
+		/*
+		 * Deleting the line will also cause a failed test.
+		 */
+		throw new UnsupportedOperationException("Operation Not Supported.");
+		//throw new UnsupportedOperationException("Operation Not Supported");
 	}
 }

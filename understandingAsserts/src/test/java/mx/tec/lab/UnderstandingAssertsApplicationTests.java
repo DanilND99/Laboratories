@@ -16,9 +16,9 @@ class UnderstandingAssertsApplicationTests {
 	@Test
 	public void whenAssertingEquality_thenEqual() {
 	    String expected = "Winter is coming";
-	    String actual = "Winter is coming";
-	    assertEquals(expected, actual);
-	    // assertEquals(expected, actual, "failure - strings are not equal");
+	    String actual = "Not today";
+	    //assertEquals(expected, actual);
+	    assertEquals(expected, actual, "failure - strings are not equal");
 	}
 	@Test
 	public void whenAssertingArraysEquality_thenEqual() {
@@ -40,6 +40,11 @@ class UnderstandingAssertsApplicationTests {
 	    assertNull(longclaw, "The longclaw should be null");
 	    //if we want to assert that an object should not be null we can use the assertNotNull assertion
 	}
+	@Test
+	public void whenAssertingNull_thenFalse() {
+	    Object longclaw = new Object();
+	    assertNotNull(longclaw, "The longclaw should not be null");
+	}
 	
 	@Test
 	public void whenAssertingNotSameObject_thenDifferent() {
@@ -47,6 +52,13 @@ class UnderstandingAssertsApplicationTests {
 	    Object widowswall = new Object();
 	    assertNotSame(oathkeeper, widowswall);
 	    // when we want to verify that two variables refer to the same object, we can use the assertSame assertion
+	}
+
+	@Test
+	public void whenAssertingSameObject_thenSame() {
+	    Object oathkeeper = new Object();
+	    Object widowswall = oathkeeper;
+	    assertSame(oathkeeper, widowswall);
 	}
 
 	@Test
@@ -68,7 +80,7 @@ class UnderstandingAssertsApplicationTests {
 
 	@Test
 	public void testAssertThatHasItems() {
-	    assertThat(Arrays.asList("Harrenhal", "Dragonstone", "Winterfell")).contains("Winterfell", "Riverrun");
+	    assertThat(Arrays.asList("Harrenhal", "Dragonstone", "Winterfell")).contains("Winterfell", "Dragonstone");
 	}
 
 }
