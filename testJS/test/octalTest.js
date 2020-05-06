@@ -1,5 +1,5 @@
 var assert = require('assert');
-var javascriptFunctions = require('../octals');
+var javascriptFunctions = require('../octal');
 describe('given1ThenReturn1()', function(){
     it('octalConvertion(1) = 1', function(){
         //Given
