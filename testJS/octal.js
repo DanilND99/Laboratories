@@ -1,4 +1,4 @@
 function octalConvertion(x){
-    return 1;
+    return x;
 }
 exports.octalConvertion = octalConvertion;
