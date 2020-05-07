@@ -5,7 +5,7 @@ function octalConvertion(x){
         var intPart;
         decimalPart = x/8;
         intPart = parseInt(decimalPart);
-        decimalPart = intPart - decimalPart;
+        decimalPart -= intPart;
         decimalPart *= 8;
         result = "" + decimalPart + result;
         x = intPart;
