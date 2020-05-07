@@ -1,7 +1,16 @@
 function octalConvertion(x){
-    if(x%8 != 0){
-        return x;
+    var result = "";
+    while(x >= 8){
+        var decimalPart;
+        var intPart;
+        decimalPart = x/8;
+        intPart = parseInt(decimalPart);
+        decimalPart = intPart - decimalPart;
+        decimalPart *= 8;
+        result = "" + decimalPart + result;
+        x = intPart;
     }
-    return 10;
+    result = "" + x + result;
+    return result.valueOf();
 }
 exports.octalConvertion = octalConvertion;
